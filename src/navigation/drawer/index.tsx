@@ -1,7 +1,11 @@
 import React from "react";
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createDrawerNavigator, useDrawerProgress } from '@react-navigation/drawer';
 
 import Index from "../../views/Index";
+import Colors from "../../theme/Colors";
+import CustomDrawerContent from "./DrawerContent";
+import { interpolate, useAnimatedStyle } from "react-native-reanimated";
+import DrawerProgress from "../../config/DrawerProgress";
 
 const MyDrawer = createDrawerNavigator();
 
@@ -9,20 +13,21 @@ const Drawer = () => {
     return (
         <MyDrawer.Navigator
             initialRouteName={"APP"}
+            drawerContent={() => <CustomDrawerContent />}
+
             screenOptions={{
                 headerTitle: "rnDespesas",
                 drawerType: 'slide',
-                unmountOnBlur: true,
+                overlayColor: 'transparent',
                 headerStyle: {
-                    //backgroundColor: '#f4511e',
-
+                    backgroundColor: Colors.pallete.primary,
                 },
-                //headerTintColor: "#fff",
+
+                headerTintColor: Colors.text.header,
                 headerTitleStyle: {
-                    //fontFamily: Fonts.family.inter.regular,
+                    color: Colors.text.header,
                 },
-
-
+                
             }}>
             <MyDrawer.Screen name={"APP"} component={Index} />
 
