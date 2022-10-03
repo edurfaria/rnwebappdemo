@@ -10,12 +10,12 @@ const localFonts = {
 
 const family = {
     opensans: {
-        extrabold: "OpenSans-ExtraBold",
-        bold: "OpenSans-Bold",
-        semibold: "OpenSans-SemiBold",
-        medium: "OpenSans-Medium",
-        regular: "OpenSans-Regular",
-        light: "OpenSans-Light",
+        800: "OpenSans-ExtraBold",
+        700: "OpenSans-Bold",
+        600: "OpenSans-SemiBold",
+        500: "OpenSans-Medium",
+        400: "OpenSans-Regular",
+        300: "OpenSans-Light",
     },
 };
 
